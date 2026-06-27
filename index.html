@@ -1,24 +1,729 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Desert Bloom Foundation</title>
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192x192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
 <meta name="theme-color" content="#E0415A">
-<meta http-equiv="refresh" content="0; url=./Desert%20Bloom%20Foundation.dc.html">
-<link rel="canonical" href="./Desert%20Bloom%20Foundation.dc.html">
-<style>
-  html,body{margin:0;height:100%;background:#F6F0E2;color:#2B2622;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-    display:flex;align-items:center;justify-content:center;text-align:center}
-  a{color:#BE5733;font-weight:700;text-decoration:none}
-</style>
+<link rel="canonical" href="https://desertbloomfoundation.com/">
+<script src="./support.js"></script>
 </head>
 <body>
-  <p>Loading Desert Bloom Foundation… <a href="./Desert%20Bloom%20Foundation.dc.html">Enter&nbsp;&rarr;</a></p>
-  <script>location.replace("./Desert%20Bloom%20Foundation.dc.html");</script>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{margin:0;background:#F5EEE0}
+  img{max-width:100%}
+  ::selection{background:#E0415A;color:#FFF6EC}
+  @keyframes dbWake{from{transform:translateY(16px) scale(.99)}to{transform:none}}
+  @keyframes dbFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+  @keyframes dbToast{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  @media (max-width:719px){
+    #model-steps > div{grid-template-columns:1fr !important;}
+    #model-steps img{grid-row:auto !important;height:auto !important;min-height:0 !important;aspect-ratio:16/10;}
+    .db-form-row{grid-template-columns:1fr !important;}
+  }
+  @keyframes dbSway{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg)}}
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important;transition-duration:.001ms !important}
+    html{scroll-behavior:auto}
+  }
+</style>
+</helmet>
+<div id="db-root" style="position:relative;background:#F5EEE0;color:#2B2622;font-family:'Hanken Grotesk',system-ui,sans-serif;font-weight:400;overflow-x:clip;">
+
+  <a href="#top" style="position:absolute;left:-9999px;top:0;background:#2B2622;color:#F5EEE0;padding:10px 16px;z-index:100;" onFocus="{{ noop }}">Skip to content</a>
+
+  <header style="position:sticky;top:0;z-index:50;background:rgba(246,240,226,.86);box-shadow:0 1px 0 rgba(43,38,34,.07);backdrop-filter:saturate(1.08) blur(9px);-webkit-backdrop-filter:saturate(1.08) blur(9px);">
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <div style="max-width:1320px;margin-inline:auto;padding:13px clamp(20px,4vw,72px);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px;">
+        <a href="#top" aria-label="Desert Bloom Foundation, home" style="justify-self:start;display:flex;align-items:center;gap:12px;text-decoration:none;color:#2B2622;">
+          <img src="assets/logo-mark.png" alt="" width="42" height="44" style="width:42px;height:auto;display:block;">
+          <span style="display:flex;flex-direction:column;line-height:1;">
+            <span style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 40,'SOFT' 55,'WONK' 1;font-weight:600;font-size:19px;letter-spacing:.004em;">Desert Bloom</span>
+            <span style="font-family:'Spline Sans Mono',monospace;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#9A3F22;margin-top:4px;">Foundation</span>
+          </span>
+        </a>
+        <nav aria-label="Primary" style="justify-self:center;display:flex;align-items:center;gap:clamp(20px,2.6vw,42px);">
+          <a href="#reality" style="font-family:'Spline Sans Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:#3A332C;white-space:nowrap;transition:color .2s;" style-hover="color:#BE5733;">The reality</a>
+          <a href="#model" style="font-family:'Spline Sans Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:#3A332C;white-space:nowrap;transition:color .2s;" style-hover="color:#BE5733;">What we do</a>
+          <a href="#partnerships" style="font-family:'Spline Sans Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:#3A332C;white-space:nowrap;transition:color .2s;" style-hover="color:#BE5733;">Partnerships</a>
+          <a href="#album" style="font-family:'Spline Sans Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:#3A332C;white-space:nowrap;transition:color .2s;" style-hover="color:#BE5733;">Gallery</a>
+          <a href="#about" style="font-family:'Spline Sans Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:#3A332C;white-space:nowrap;transition:color .2s;" style-hover="color:#BE5733;">About</a>
+        </nav>
+        <a href="https://gofund.me/7fcaa4515" target="_blank" rel="noopener" style="justify-self:end;font-family:'Hanken Grotesk',sans-serif;font-weight:700;font-size:14px;letter-spacing:.01em;color:#FFF6EC;background:#BE5733;padding:10px 20px;border-radius:2px;text-decoration:none;white-space:nowrap;box-shadow:0 1px 0 rgba(43,38,34,.14);" style-hover="color:#1A1714;">Donate</a>
+      </div>
+    </sc-if>
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:12px clamp(18px,5vw,40px);">
+        <a href="#top" aria-label="Desert Bloom Foundation, home" style="display:flex;align-items:center;gap:11px;text-decoration:none;color:#2B2622;">
+          <img src="assets/logo-mark.png" alt="" width="40" height="42" style="width:40px;height:auto;display:block;">
+          <span style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 40,'SOFT' 55,'WONK' 1;font-weight:600;font-size:18px;">Desert Bloom</span>
+        </a>
+        <button onClick="{{ toggleMenu }}" aria-label="Open menu" aria-expanded="{{ menuOpen }}" style="display:flex;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;background:transparent;border:1.5px solid rgba(43,38,34,.22);border-radius:3px;cursor:pointer;padding:0 11px;">
+          <span style="display:block;height:2px;background:#2B2622;border-radius:2px;"></span>
+          <span style="display:block;height:2px;background:#2B2622;border-radius:2px;"></span>
+          <span style="display:block;height:2px;background:#2B2622;border-radius:2px;"></span>
+        </button>
+      </div>
+    </sc-if>
+  </header>
+
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed;inset:0;z-index:60;background:#F5EEE0;display:flex;flex-direction:column;padding:18px clamp(18px,6vw,40px) 40px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <span style="display:flex;align-items:center;gap:11px;"><img src="assets/logo-mark.png" alt="" width="40" style="width:40px;height:auto;"><span style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 40,'SOFT' 55,'WONK' 1;font-weight:600;font-size:19px;">Desert Bloom</span></span>
+        <button onClick="{{ closeMenu }}" aria-label="Close menu" style="width:44px;height:44px;background:transparent;border:1.5px solid rgba(43,38,34,.22);border-radius:3px;font-size:22px;line-height:1;color:#2B2622;cursor:pointer;">&times;</button>
+      </div>
+      <nav aria-label="Primary" style="display:flex;flex-direction:column;gap:2px;margin-top:38px;">
+        <a href="#reality" onClick="{{ closeMenu }}" style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 80,'SOFT' 60,'WONK' 1;font-weight:560;font-size:32px;color:#2B2622;text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(43,38,34,.12);">The reality</a>
+        <a href="#model" onClick="{{ closeMenu }}" style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 80,'SOFT' 60,'WONK' 1;font-weight:560;font-size:32px;color:#2B2622;text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(43,38,34,.12);">What we do</a>
+        <a href="#partnerships" onClick="{{ closeMenu }}" style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 80,'SOFT' 60,'WONK' 1;font-weight:560;font-size:32px;color:#2B2622;text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(43,38,34,.12);">Partnerships</a>
+        <a href="#album" onClick="{{ closeMenu }}" style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 80,'SOFT' 60,'WONK' 1;font-weight:560;font-size:32px;color:#2B2622;text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(43,38,34,.12);">Gallery</a>
+        <a href="#about" onClick="{{ closeMenu }}" style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 80,'SOFT' 60,'WONK' 1;font-weight:560;font-size:32px;color:#2B2622;text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(43,38,34,.12);">About</a>
+      </nav>
+      <a href="https://gofund.me/7fcaa4515" target="_blank" rel="noopener" onClick="{{ closeMenu }}" style="margin-top:32px;text-align:center;font-family:'Hanken Grotesk',sans-serif;font-weight:700;font-size:17px;color:#FFF6EC;background:#BE5733;padding:16px;border-radius:2px;text-decoration:none;">Donate</a>
+    </div>
+  </sc-if>
+
+  <main id="top">
+
+    <section id="hero" onMouseMove="{{ onHeroMove }}" onMouseLeave="{{ onHeroLeave }}" onTouchMove="{{ onHeroTouch }}" onTouchEnd="{{ onHeroLeave }}" data-screen-label="Hero" style="position:relative;overflow:hidden;padding-top:clamp(30px,5vh,72px);padding-bottom:clamp(48px,8vh,104px);">
+      <svg id="hero-hex" viewBox="0 0 {{ heroW }} {{ heroH }}" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;-webkit-mask:linear-gradient(to bottom,#000 48%,transparent 92%);mask:linear-gradient(to bottom,#000 48%,transparent 92%);">
+        <sc-for list="{{ heroHexes }}" as="hex" hint-placeholder-count="0">
+          <polygon points="{{ hex.pts }}" style="{{ hex.style }}"></polygon>
+        </sc-for>
+      </svg>
+      <div style="position:relative;z-index:1;max-width:1240px;margin-inline:auto;padding-inline:clamp(20px,5.5vw,88px);display:flex;flex-wrap:wrap;align-items:center;gap:clamp(24px,4vw,60px);">
+        <div style="flex:1 1 340px;min-width:min(100%,300px);">
+          <p style="font-family:'Spline Sans Mono',monospace;font-size:12px;letter-spacing:.19em;text-transform:uppercase;color:#9A3F22;margin:0;">A youth-led nonprofit · Harrison, New York</p>
+          <h1 style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 72,'WONK' 1;font-weight:540;line-height:1.02;letter-spacing:-.018em;color:#2B2622;font-size:clamp(38px,6.2vw,84px);margin:20px 0 0;text-wrap:balance;">Where grocery stores don't reach, <span style="font-style:italic;font-variation-settings:'opsz' 144,'SOFT' 80,'WONK' 1;color:#BE5733;">Desert Bloom</span> does.</h1>
+          <p style="font-size:clamp(17px,1.5vw,21px);line-height:1.55;max-width:32em;margin:24px 0 0;color:#4A4138;">We're a youth-led nonprofit bringing fresh, hand-chosen meals to neighbors in Westchester's food deserts, packed and delivered alongside local kitchens, farms, and sponsors.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:13px;margin-top:32px;">
+            <a href="https://gofund.me/7fcaa4515" target="_blank" rel="noopener" style="font-family:'Hanken Grotesk',sans-serif;font-weight:700;font-size:16px;color:#FFF6EC;background:#BE5733;padding:14px 26px;border-radius:2px;text-decoration:none;box-shadow:0 1px 0 rgba(43,38,34,.14);" style-hover="color:#000000;">Donate</a>
+            <button onClick="{{ openPartner }}" style="font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:16px;color:#2B2622;background:transparent;padding:13px 24px;border:1.5px solid rgba(43,38,34,.3);border-radius:2px;cursor:pointer;" style-hover="background:#2B2622;border-color:#2B2622;color:#FFFFFF;">Partner with us</button>
+          </div>
+        </div>
+        <div style="flex:0 1 320px;min-width:min(100%,260px);display:flex;justify-content:center;">
+          <div style="position:relative;width:min(100%,400px);animation:dbWake 1.05s cubic-bezier(.2,.72,.2,1) both;">
+            <div aria-hidden="true" style="position:absolute;inset:-7% -5% -13% -5%;background:radial-gradient(closest-side,rgba(212,154,45,.22),rgba(212,154,45,0) 72%);"></div>
+            <img src="assets/logo-mark.png" alt="Illustration of a prickly-pear cactus in bloom rising from cracked desert ground beneath a desert sun" style="position:relative;width:100%;height:auto;display:block;animation:dbFloat 7.5s ease-in-out infinite;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reality" data-screen-label="The reality" style="scroll-margin-top:84px;padding-block:clamp(56px,10vh,140px);">
+      <div style="max-width:1240px;margin-inline:auto;padding-inline:clamp(20px,5.5vw,88px);">
+        <p data-reveal style="font-family:'Spline Sans Mono',monospace;font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:#9A3F22;margin:0;">The reality</p>
+        <h2 data-reveal style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 70,'WONK' 1;font-weight:540;line-height:1.06;letter-spacing:-.015em;color:#2B2622;font-size:clamp(28px,4.4vw,56px);max-width:22ch;margin:18px 0 0;text-wrap:balance;">Across Westchester, too many neighbors can't reach a fresh meal.</h2>
+        <p data-reveal style="font-family:'Spline Sans Mono',monospace;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:#6B5D4D;margin:16px 0 0;">Mount Vernon, the highest unmet hunger need in Westchester · Feeding Westchester / BCG, 2023</p>
+        <p data-reveal style="max-width:52ch;margin:28px 0 0;font-size:clamp(16px,1.3vw,19px);line-height:1.66;color:#4A4138;">The need is all around us. Across Westchester, neighbors are experiencing homelessness, families cannot afford enough to eat, and many who can buy groceries still cannot reach or afford fresh food. In a food desert, at least a third of residents live more than half a mile from a supermarket, far enough that a missed bus or a tight week puts real produce out of reach. What goes missing is not only a meal, but the dignity of a fresh, healthy one. Desert Bloom exists to close that gap: we source and fund real food, then deliver it directly to the people who need it most. Mount Vernon is the largest food desert we serve, and just one of many. Your donation is what makes the next fresh meal possible.</p>
+
+        <div data-reveal style="margin-top:clamp(40px,6vw,76px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:clamp(22px,3vw,44px);border-top:1px solid rgba(43,38,34,.18);padding-top:6px;">
+          <div style="padding-top:26px;">
+            <div style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 60,'WONK' 1;font-weight:560;font-size:clamp(42px,5.4vw,70px);color:#BE5733;line-height:.96;" data-count>24.9%</div>
+            <p style="margin:16px 0 0;font-size:16px;line-height:1.5;max-width:26ch;color:#3A332C;">About 1 in 4 adults in New York State experience food insecurity.</p>
+            <p style="font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6B5D4D;margin:13px 0 0;">NY State Dept. of Health</p>
+          </div>
+          <div style="padding-top:26px;">
+            <div style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 60,'WONK' 1;font-weight:560;font-size:clamp(42px,5.4vw,70px);color:#5E6B3F;line-height:.96;" data-count>~3M</div>
+            <p style="margin:16px 0 0;font-size:16px;line-height:1.5;max-width:26ch;color:#3A332C;">New Yorkers receive SNAP benefits every single month.</p>
+            <p style="font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6B5D4D;margin:13px 0 0;">NY State Comptroller · 2025</p>
+          </div>
+          <div style="padding-top:26px;">
+            <div style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 60,'WONK' 1;font-weight:560;font-size:clamp(42px,5.4vw,70px);color:#2B2622;line-height:.96;">½ mile</div>
+            <p style="margin:16px 0 0;font-size:16px;line-height:1.5;max-width:26ch;color:#3A332C;">The distance that defines a food desert when a third of an area lives farther than it from a supermarket.</p>
+            <p style="font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6B5D4D;margin:13px 0 0;">How a food desert is defined</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section data-screen-label="On the ground" data-reveal style="position:relative;height:clamp(280px,46vh,520px);overflow:hidden;">
+      <img src="assets/photos/p04.jpg" alt="Daniel and Liam Wellisch with a CSA Kitchen volunteer, giving a thumbs up in the kitchen storeroom" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 24%;display:block;">
+      <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(28,24,21,.62),rgba(28,24,21,.12) 60%,transparent);"></div>
+      <div style="position:absolute;left:0;bottom:0;padding:clamp(22px,4vw,54px);max-width:640px;">
+        <p style="font-family:'Spline Sans Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#E0A24A;margin:0 0 10px;">On the ground</p>
+        <p style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 74,'WONK' 1;font-weight:540;line-height:1.12;font-size:clamp(22px,3.2vw,40px);color:#F6EEDC;margin:0;text-wrap:balance;">We source, fund, and deliver fresh meals to Westchester's food deserts, one neighborhood at a time.</p>
+      </div>
+    </section>
+
+    <section id="model" data-screen-label="What we do" style="scroll-margin-top:84px;padding-block:clamp(56px,10vh,140px);background:rgba(231,217,184,.5);">
+      <div style="max-width:1240px;margin-inline:auto;padding-inline:clamp(20px,5.5vw,88px);">
+        <div style="display:flex;flex-wrap:wrap;gap:clamp(26px,5vw,72px);align-items:flex-end;justify-content:space-between;">
+          <div style="flex:1 1 360px;min-width:min(100%,300px);">
+            <p data-reveal style="font-family:'Spline Sans Mono',monospace;font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:#9A3F22;margin:0;">What we do</p>
+            <h2 data-reveal style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 70,'WONK' 1;font-weight:540;line-height:1.05;letter-spacing:-.015em;color:#2B2622;font-size:clamp(28px,4.4vw,54px);max-width:15ch;margin:18px 0 0;text-wrap:balance;">Real meals, chosen by hand and packed for delivery.</h2>
+          </div>
+          <p data-reveal style="flex:1 1 320px;min-width:min(100%,280px);max-width:44ch;font-size:clamp(16px,1.3vw,18px);line-height:1.66;color:#4A4138;margin:0;">We don't hand out cans. We source fresh food, build it into hand-chosen meal boxes, and get them to neighbors who'd otherwise go without. We team up with local corporate sponsors who fund the food, and with farms and kitchens who help make and move it. The name is the idea: a desert is a place where good food doesn't grow, so we bring the bloom to it.</p>
+        </div>
+
+        <div id="model-steps" style="margin:clamp(40px,6vw,72px) 0 0;display:flex;flex-direction:column;gap:clamp(16px,2.4vw,28px);">
+          <div data-reveal style="display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(18px,3vw,44px);align-items:center;background:#FBF6EC;border-radius:4px;overflow:hidden;">
+            <div style="padding:clamp(24px,3vw,44px);">
+              <span style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 60,'WONK' 1;font-weight:540;font-size:clamp(28px,3vw,40px);color:#5E6B3F;line-height:1;">01</span>
+              <h3 style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 60,'SOFT' 60,'WONK' 1;font-weight:600;font-size:clamp(20px,2vw,26px);color:#2B2622;margin:8px 0 0;">Source fresh food</h3>
+              <p style="margin:10px 0 0;font-size:16px;line-height:1.6;max-width:46ch;color:#4A4138;">We pick up fresh produce and ingredients, real food chosen to make a full meal, not just fill a bag. Sponsors fund it; farms and stores help supply it.</p>
+            </div>
+            <img src="assets/photos/p23.jpg" alt="Fresh ingredients and sauces lined up during meal prep" loading="lazy" style="width:100%;height:100%;min-height:240px;object-fit:cover;object-position:center;display:block;">
+          </div>
+          <div data-reveal style="display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(18px,3vw,44px);align-items:center;background:#FBF6EC;border-radius:4px;overflow:hidden;">
+            <img src="assets/photos/p09.jpg" alt="A volunteer tossing a large bowl of fresh salad in the kitchen" loading="lazy" style="width:100%;height:100%;min-height:240px;object-fit:cover;object-position:center 30%;display:block;grid-row:1;" data-order-img="left">
+            <div style="padding:clamp(24px,3vw,44px);">
+              <span style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 60,'WONK' 1;font-weight:540;font-size:clamp(28px,3vw,40px);color:#5E6B3F;line-height:1;">02</span>
+              <h3 style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 60,'SOFT' 60,'WONK' 1;font-weight:600;font-size:clamp(20px,2vw,26px);color:#2B2622;margin:8px 0 0;">Pack by hand</h3>
+              <p style="margin:10px 0 0;font-size:16px;line-height:1.6;max-width:46ch;color:#4A4138;">Every box is cooked and packed by hand alongside our partners' teams, built to feed a household: balanced, fresh, and ready to eat.</p>
+            </div>
+          </div>
+          <div data-reveal style="display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(18px,3vw,44px);align-items:center;background:#FBF6EC;border-radius:4px;overflow:hidden;">
+            <div style="padding:clamp(24px,3vw,44px);">
+              <span style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 60,'WONK' 1;font-weight:540;font-size:clamp(28px,3vw,40px);color:#5E6B3F;line-height:1;">03</span>
+              <h3 style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 60,'SOFT' 60,'WONK' 1;font-weight:600;font-size:clamp(20px,2vw,26px);color:#2B2622;margin:8px 0 0;">Deliver it warm</h3>
+              <p style="margin:10px 0 0;font-size:16px;line-height:1.6;max-width:46ch;color:#4A4138;">We bring the meals straight to the neighborhood and hand them out the same day, hot, fresh, and face to face.</p>
+            </div>
+            <img src="assets/photos/p06.jpg" alt="A founder logging details on a laptop with a community member at a delivery" loading="lazy" style="width:100%;height:100%;min-height:240px;object-fit:cover;object-position:center 25%;display:block;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="partnerships" data-screen-label="Partnerships" style="scroll-margin-top:84px;padding-block:clamp(56px,10vh,140px);">
+      <div style="max-width:1240px;margin-inline:auto;padding-inline:clamp(20px,5.5vw,88px);display:flex;flex-wrap:wrap;gap:clamp(34px,5vw,72px);align-items:center;">
+        <div style="flex:1 1 380px;min-width:min(100%,300px);">
+          <p data-reveal style="font-family:'Spline Sans Mono',monospace;font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:#9A3F22;margin:0;">Partnerships</p>
+          <h2 data-reveal style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 70,'WONK' 1;font-weight:540;line-height:1.05;letter-spacing:-.015em;color:#2B2622;font-size:clamp(28px,4.4vw,54px);max-width:17ch;margin:18px 0 0;text-wrap:balance;">CSA Kitchen is our largest partner, and just one of many.</h2>
+          <p data-reveal style="max-width:52ch;margin:24px 0 0;font-size:clamp(16px,1.3vw,18px);line-height:1.66;color:#4A4138;">CSA Kitchen is one of many partners we work with, and our largest, serving 100+ people a month alongside us. Across Westchester we run monthly corporate sponsorships and partnerships: companies that fund meals, farms that donate food, and other kitchens and pantries. We source and fund the meals ourselves, and donate directly to the organizations that help us serve them. We also partner with the Boys &amp; Girls Club of Greenwich, where we help feed the kids and spend time with them.</p>
+          <dl data-reveal style="margin:30px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr));gap:18px 26px;border-top:1px solid rgba(43,38,34,.18);padding-top:22px;">
+            <div><dt style="font-family:'Spline Sans Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#6B5D4D;">Largest partner</dt><dd style="margin:6px 0 0;font-weight:600;font-size:15px;color:#2B2622;">CSA Kitchen</dd></div>
+            <div><dt style="font-family:'Spline Sans Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#6B5D4D;">Founded</dt><dd style="margin:6px 0 0;font-weight:600;font-size:15px;color:#2B2622;">1986</dd></div>
+            <div><dt style="font-family:'Spline Sans Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#6B5D4D;">Monthly</dt><dd style="margin:6px 0 0;font-weight:600;font-size:15px;color:#2B2622;">100+ people</dd></div>
+            <div><dt style="font-family:'Spline Sans Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#6B5D4D;">Served with CSA</dt><dd style="margin:6px 0 0;font-weight:600;font-size:15px;color:#2B2622;">500+ in our partnership</dd></div>
+          </dl>
+          <div style="margin-top:24px;">
+            <p style="font-family:'Spline Sans Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#6B5D4D;margin:0 0 12px;">Largest partnerships</p>
+            <div style="display:flex;flex-wrap:wrap;gap:12px;">
+              <div style="display:flex;align-items:center;gap:11px;background:#FBF6EC;border-radius:8px;padding:8px 14px 8px 8px;border:1px solid rgba(43,38,34,.1);">
+                <img src="assets/partner-csa.png" alt="CSA Soup Kitchen logo" loading="lazy" style="width:54px;height:54px;object-fit:cover;border-radius:6px;flex:0 0 auto;">
+                <span style="font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:.05em;line-height:1.45;color:#3A332C;">CSA<br>Soup Kitchen</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:11px;background:#fff;border-radius:8px;padding:8px 14px 8px 8px;border:1px solid rgba(43,38,34,.1);">
+                <img src="assets/partner-bgcg.png" alt="Boys and Girls Club of Greenwich logo" loading="lazy" style="width:54px;height:54px;object-fit:contain;flex:0 0 auto;">
+                <span style="font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:.05em;line-height:1.45;color:#3A332C;">Boys &amp; Girls Club<br>of Greenwich</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-reveal style="flex:1 1 300px;min-width:min(100%,260px);display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <img src="assets/photos/p05.jpg" alt="Daniel and Liam Wellisch with a partner outside the CSA Kitchen building in Mount Vernon" loading="lazy" style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center;border-radius:3px;display:block;"><img src="assets/photos/p26.jpg" alt="Daniel and Liam bagging baked goods at the soup kitchen" loading="lazy" style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 22%;border-radius:3px;display:block;">
+          <img src="assets/photos/p03.jpg" alt="Volunteers carving roast chicken in the CSA Kitchen" loading="lazy" style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center;border-radius:3px;display:block;">
+          <img src="assets/photos/p13.jpg" alt="Founders packing meals with cases of water at the kitchen" loading="lazy" style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 30%;border-radius:3px;display:block;">
+        </div>
+      </div>
+    </section>
+
+    <section data-screen-label="Event proof" style="background:#2B2622;color:#F3E9D6;padding-block:clamp(56px,11vh,140px);">
+      <div style="max-width:1240px;margin-inline:auto;padding-inline:clamp(20px,5.5vw,88px);">
+        <p data-reveal style="font-family:'Spline Sans Mono',monospace;font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;color:#E0A24A;margin:0;">The most recent event</p>
+        <blockquote data-reveal style="margin:24px 0 0;font-family:'Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 76,'WONK' 1;font-weight:500;line-height:1.1;letter-spacing:-.012em;font-size:clamp(28px,4.6vw,62px);color:#F6EEDC;max-width:20ch;text-wrap:balance;">In our most recent event we served 94 people a fresh, hot meal in Mount Vernon.</blockquote>
+        <p data-reveal style="font-family:'Spline Sans Mono',monospace;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:#B7A98E;margin:26px 0 0;">In the past month · Mount Vernon, New York</p>
+      </div>
+    </section>
+
+    <section id="impact" data-screen-label="Impact" style="scroll-margin-top:84px;padding-block:clamp(56px,10vh,140px);">
+      <div style="max-width:1240px;margin-inline:auto;padding-inline:clamp(20px,5.5vw,88px);">
+        <p data-reveal style="font-family:'Spline Sans Mono',monospace;font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:#9A3F22;margin:0;">Impact</p>
+        <div style="display:flex;flex-wrap:wrap;gap:clamp(20px,4vw,60px);align-items:flex-end;justify-content:space-between;margin-top:18px;">
+          <h2 data-reveal style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 70,'WONK' 1;font-weight:540;line-height:1.05;letter-spacing:-.015em;color:#2B2622;font-size:clamp(28px,4.4vw,54px);margin:0;">Built to grow.</h2>
+          <p data-reveal style="max-width:40ch;font-size:16px;line-height:1.6;color:#4A4138;margin:0;">We're scaling fast, and every dollar goes straight to fresh food, where it goes a long way.</p>
+        </div>
+
+        <div data-reveal style="margin-top:clamp(38px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:clamp(20px,3vw,40px);">
+          <div style="background:rgba(231,217,184,.55);border-radius:3px;padding:clamp(24px,3vw,34px);">
+            <div style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 60,'WONK' 1;font-weight:560;font-size:clamp(44px,5.6vw,74px);color:#BE5733;line-height:.95;" data-count>106</div>
+            <p style="margin:14px 0 0;font-size:15.5px;line-height:1.5;color:#3A332C;">people receive meals at the average Desert Bloom event.</p>
+          </div>
+          <div style="background:rgba(231,217,184,.55);border-radius:3px;padding:clamp(24px,3vw,34px);">
+            <div style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 60,'WONK' 1;font-weight:560;font-size:clamp(44px,5.6vw,74px);color:#5E6B3F;line-height:.95;" data-count>$350</div>
+            <p style="margin:14px 0 0;font-size:15.5px;line-height:1.5;color:#3A332C;">is roughly all it takes for us to feed 100 people a meal.</p>
+          </div>
+          <div style="background:rgba(231,217,184,.55);border-radius:3px;padding:clamp(24px,3vw,34px);">
+            <div style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 60,'WONK' 1;font-weight:560;font-size:clamp(44px,5.6vw,74px);color:#2B2622;line-height:.95;">Monthly</div>
+            <p style="margin:14px 0 0;font-size:15.5px;line-height:1.5;color:#3A332C;">corporate sponsorships and partnerships across Westchester.</p>
+          </div>
+        </div>
+
+        <div data-reveal style="margin-top:clamp(20px,3vw,28px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:clamp(16px,2vw,24px);">
+          <figure style="margin:0;"><img src="assets/photos/p02.jpg" alt="Boxes of fresh meals and salads ready to go" loading="lazy" style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center;border-radius:3px;display:block;"><figcaption style="font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6B5D4D;margin-top:10px;">Meal boxes</figcaption></figure>
+          <figure style="margin:0;"><img src="assets/photos/p24.jpg" alt="Fresh pesto pasta prepared in a large tray" loading="lazy" style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 35%;border-radius:3px;display:block;"><figcaption style="font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6B5D4D;margin-top:10px;">Fresh food</figcaption></figure>
+          <figure style="margin:0;"><img src="assets/photos/p15.jpg" alt="Founders bagging baked goods for delivery" loading="lazy" style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 25%;border-radius:3px;display:block;"><figcaption style="font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6B5D4D;margin-top:10px;">Packing day</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="album" data-screen-label="Gallery" style="scroll-margin-top:84px;padding-block:clamp(56px,10vh,140px);background:rgba(231,217,184,.5);">
+      <div style="max-width:1320px;margin-inline:auto;padding-inline:clamp(20px,5.5vw,88px);">
+        <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;justify-content:space-between;margin-bottom:clamp(28px,4vw,48px);">
+          <div>
+            <p data-reveal style="font-family:'Spline Sans Mono',monospace;font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:#9A3F22;margin:0;">Gallery</p>
+            <h2 data-reveal style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 70,'WONK' 1;font-weight:540;line-height:1.05;letter-spacing:-.015em;color:#2B2622;font-size:clamp(28px,4.4vw,54px);margin:14px 0 0;">From the kitchen.</h2>
+          </div>
+          <p data-reveal style="font-family:'Spline Sans Mono',monospace;font-size:12px;letter-spacing:.06em;color:#6B5D4D;max-width:34ch;margin:0;line-height:1.6;">We source, cook, pack, and deliver ourselves, and donate directly to partner organizations across Westchester.</p>
+        </div>
+        <div data-reveal style="columns:clamp(165px,22vw,235px);column-gap:clamp(8px,1vw,13px);">
+          <a href="assets/photos/g01.jpg" target="_blank" rel="noopener" style="display:block;break-inside:avoid;margin:0 0 clamp(8px,1vw,13px);overflow:hidden;border-radius:3px;"><img src="assets/photos/g01.jpg" alt="Liam taking sign-ups on a laptop as a child receives a meal outside the Mount Vernon kitchen" loading="lazy" style="width:100%;height:auto;display:block;transition:transform .55s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.04);"></a>
+          <a href="assets/photos/g05.jpg" target="_blank" rel="noopener" style="display:block;break-inside:avoid;margin:0 0 clamp(8px,1vw,13px);overflow:hidden;border-radius:3px;"><img src="assets/photos/g05.jpg" alt="Daniel plating penne into a takeout container" loading="lazy" style="width:100%;height:auto;display:block;transition:transform .55s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.04);"></a>
+          <a href="assets/photos/g03.jpg" target="_blank" rel="noopener" style="display:block;break-inside:avoid;margin:0 0 clamp(8px,1vw,13px);overflow:hidden;border-radius:3px;"><img src="assets/photos/g03.jpg" alt="Daniel and Liam with a CSA Kitchen volunteer outside the Mount Vernon site" loading="lazy" style="width:100%;height:auto;display:block;transition:transform .55s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.04);"></a>
+          <a href="assets/photos/g08.jpg" target="_blank" rel="noopener" style="display:block;break-inside:avoid;margin:0 0 clamp(8px,1vw,13px);overflow:hidden;border-radius:3px;"><img src="assets/photos/g08.jpg" alt="Liam tossing a large bowl of caesar salad" loading="lazy" style="width:100%;height:auto;display:block;transition:transform .55s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.04);"></a>
+          <a href="assets/photos/g02.jpg" target="_blank" rel="noopener" style="display:block;break-inside:avoid;margin:0 0 clamp(8px,1vw,13px);overflow:hidden;border-radius:3px;"><img src="assets/photos/g02.jpg" alt="Daniel handing a bag of food to a neighbor at the kitchen door" loading="lazy" style="width:100%;height:auto;display:block;transition:transform .55s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.04);"></a>
+          <a href="assets/photos/g06.jpg" target="_blank" rel="noopener" style="display:block;break-inside:avoid;margin:0 0 clamp(8px,1vw,13px);overflow:hidden;border-radius:3px;"><img src="assets/photos/g06.jpg" alt="Liam packing a salad and chicken meal beside crates of citrus" loading="lazy" style="width:100%;height:auto;display:block;transition:transform .55s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.04);"></a>
+          <a href="assets/photos/g10.jpg" target="_blank" rel="noopener" style="display:block;break-inside:avoid;margin:0 0 clamp(8px,1vw,13px);overflow:hidden;border-radius:3px;"><img src="assets/photos/g10.jpg" alt="Daniel and Liam topping salad trays with cheese" loading="lazy" style="width:100%;height:auto;display:block;transition:transform .55s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.04);"></a>
+          <a href="assets/photos/g12.jpg" target="_blank" rel="noopener" style="display:block;break-inside:avoid;margin:0 0 clamp(8px,1vw,13px);overflow:hidden;border-radius:3px;"><img src="assets/photos/g12.jpg" alt="Liam garnishing trays of pesto pasta with fresh basil" loading="lazy" style="width:100%;height:auto;display:block;transition:transform .55s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.04);"></a>
+          <a href="assets/photos/g04.jpg" target="_blank" rel="noopener" style="display:block;break-inside:avoid;margin:0 0 clamp(8px,1vw,13px);overflow:hidden;border-radius:3px;"><img src="assets/photos/g04.jpg" alt="Daniel and Liam giving a thumbs up with a CSA Kitchen volunteer" loading="lazy" style="width:100%;height:auto;display:block;transition:transform .55s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.04);"></a>
+          <a href="assets/photos/g07.jpg" target="_blank" rel="noopener" style="display:block;break-inside:avoid;margin:0 0 clamp(8px,1vw,13px);overflow:hidden;border-radius:3px;"><img src="assets/photos/g07.jpg" alt="Daniel and Liam serving salad and chicken alongside a volunteer" loading="lazy" style="width:100%;height:auto;display:block;transition:transform .55s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.04);"></a>
+          <a href="assets/photos/g11.jpg" target="_blank" rel="noopener" style="display:block;break-inside:avoid;margin:0 0 clamp(8px,1vw,13px);overflow:hidden;border-radius:3px;"><img src="assets/photos/g11.jpg" alt="Daniel and Liam prepping salad trays together" loading="lazy" style="width:100%;height:auto;display:block;transition:transform .55s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.04);"></a>
+          <a href="assets/photos/g14.jpg" target="_blank" rel="noopener" style="display:block;break-inside:avoid;margin:0 0 clamp(8px,1vw,13px);overflow:hidden;border-radius:3px;"><img src="assets/photos/g14.jpg" alt="Daniel and Liam bagging cookies and sandwiches for delivery" loading="lazy" style="width:100%;height:auto;display:block;transition:transform .55s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.04);"></a>
+          <a href="assets/photos/g09.jpg" target="_blank" rel="noopener" style="display:block;break-inside:avoid;margin:0 0 clamp(8px,1vw,13px);overflow:hidden;border-radius:3px;"><img src="assets/photos/g09.jpg" alt="Daniel mopping the kitchen floor during cleanup" loading="lazy" style="width:100%;height:auto;display:block;transition:transform .55s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.04);"></a>
+          <a href="assets/photos/g13.jpg" target="_blank" rel="noopener" style="display:block;break-inside:avoid;margin:0 0 clamp(8px,1vw,13px);overflow:hidden;border-radius:3px;"><img src="assets/photos/g13.jpg" alt="Trays of fresh meals lined up and ready to pack" loading="lazy" style="width:100%;height:auto;display:block;transition:transform .55s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.04);"></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" data-screen-label="About" style="scroll-margin-top:84px;padding-block:clamp(56px,10vh,140px);">
+      <div style="max-width:1240px;margin-inline:auto;padding-inline:clamp(20px,5.5vw,88px);">
+        <p data-reveal style="font-family:'Spline Sans Mono',monospace;font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:#9A3F22;margin:0;">Who we are</p>
+        <h2 data-reveal style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 70,'WONK' 1;font-weight:540;line-height:1.05;letter-spacing:-.015em;color:#2B2622;font-size:clamp(28px,4.4vw,54px);max-width:16ch;margin:18px 0 0;text-wrap:balance;">Two brothers, doing the work themselves.</h2>
+        <p data-reveal style="max-width:58ch;margin:24px 0 0;font-size:clamp(16px,1.3vw,18px);line-height:1.66;color:#4A4138;">Desert Bloom was founded by Daniel and Liam Wellisch, twin brothers and high-school students from Harrison, New York. They run it together and share every part of the work: sourcing the food, packing the meals, building partnerships, and showing up for the deliveries. What started as a way to get fresh, real meals to neighbors who go without grew into the nonprofit it is today.</p>
+
+        <div data-reveal style="margin-top:clamp(38px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(22px,3vw,40px);">
+          <figure style="margin:0;">
+            <img src="assets/founder-daniel.png" alt="Portrait of Daniel Wellisch, co-founder of Desert Bloom Foundation" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;border-radius:3px;display:block;">
+            <figcaption style="margin-top:16px;"><span style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 60,'SOFT' 60,'WONK' 1;font-weight:600;font-size:22px;color:#2B2622;">Daniel Wellisch</span><br><span style="font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#9A3F22;">President and Co-Founder</span></figcaption>
+          </figure>
+          <figure style="margin:0;">
+            <img src="assets/founder-liam.png" alt="Portrait of Liam Wellisch, co-founder of Desert Bloom Foundation" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;border-radius:3px;display:block;">
+            <figcaption style="margin-top:16px;"><span style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 60,'SOFT' 60,'WONK' 1;font-weight:600;font-size:22px;color:#2B2622;">Liam Wellisch</span><br><span style="font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#9A3F22;">President and Co-Founder</span></figcaption>
+          </figure>
+          <figure style="margin:0;">
+            <img src="assets/photos/p04.jpg" alt="Daniel and Liam with a CSA Kitchen partner" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 30%;border-radius:3px;display:block;">
+            <figcaption style="margin-top:16px;"><span style="font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:.06em;color:#5A4D3E;line-height:1.6;">We're the ones sourcing, funding, and delivering every meal.</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="get-involved" data-screen-label="Get involved" style="scroll-margin-top:84px;padding-block:clamp(60px,11vh,150px);position:relative;">
+      <div style="max-width:1240px;margin-inline:auto;padding-inline:clamp(20px,5.5vw,88px);">
+        <div style="display:flex;flex-wrap:wrap;gap:clamp(20px,4vw,48px);align-items:flex-start;justify-content:space-between;">
+          <div style="flex:1 1 420px;min-width:min(100%,300px);">
+            <p data-reveal style="font-family:'Spline Sans Mono',monospace;font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:#9A3F22;margin:0;">Get involved</p>
+            <h2 data-reveal style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 72,'WONK' 1;font-weight:540;line-height:1.04;letter-spacing:-.016em;color:#2B2622;font-size:clamp(32px,5vw,68px);margin:18px 0 0;">Help the next block <span style="position:relative;white-space:nowrap;">bloom<svg viewBox="0 0 120 12" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;left:-1%;bottom:-.16em;width:102%;height:.42em;overflow:visible;"><path d="M2,8 C26,2 46,12 70,6 C92,1 110,8 118,4" fill="none" stroke="#E0415A" stroke-width="3.6" stroke-linecap="round"></path></svg></span>.</h2>
+            <p data-reveal style="max-width:42ch;margin:22px 0 0;font-size:clamp(16px,1.3vw,18px);line-height:1.6;color:#4A4138;">Every meal starts with someone deciding to show up. Here's how you can, whether you give, partner, or roll up your sleeves.</p>
+          </div>
+          <svg width="100" height="100" viewBox="0 0 100 100" aria-hidden="true" style="flex:0 0 auto;width:clamp(72px,8vw,104px);height:auto;transform-origin:center;animation:dbSway 7s ease-in-out infinite;">
+            <g transform="translate(50 50)">
+              <ellipse cx="0" cy="-21" rx="9" ry="19" fill="#E0415A" transform="rotate(0)"></ellipse>
+              <ellipse cx="0" cy="-21" rx="9" ry="19" fill="#E0415A" transform="rotate(45)"></ellipse>
+              <ellipse cx="0" cy="-21" rx="9" ry="19" fill="#E0415A" transform="rotate(90)"></ellipse>
+              <ellipse cx="0" cy="-21" rx="9" ry="19" fill="#E0415A" transform="rotate(135)"></ellipse>
+              <ellipse cx="0" cy="-21" rx="9" ry="19" fill="#E0415A" transform="rotate(180)"></ellipse>
+              <ellipse cx="0" cy="-21" rx="9" ry="19" fill="#E0415A" transform="rotate(225)"></ellipse>
+              <ellipse cx="0" cy="-21" rx="9" ry="19" fill="#E0415A" transform="rotate(270)"></ellipse>
+              <ellipse cx="0" cy="-21" rx="9" ry="19" fill="#E0415A" transform="rotate(315)"></ellipse>
+              <circle cx="0" cy="0" r="11" fill="#D49A2D"></circle>
+            </g>
+          </svg>
+        </div>
+
+        <div style="margin-top:clamp(38px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:clamp(18px,2.4vw,28px);">
+          <div data-reveal style="background:#FBF6EC;border-radius:3px;padding:clamp(24px,2.6vw,34px);display:flex;flex-direction:column;border-top:3px solid #E0415A;">
+            <span style="font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#9A3F22;">Donate</span>
+            <h3 style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 60,'SOFT' 64,'WONK' 1;font-weight:600;font-size:clamp(21px,2vw,27px);color:#2B2622;margin:14px 0 0;">Fund the food</h3>
+            <p style="margin:12px 0 0;font-size:15.5px;line-height:1.6;color:#4A4138;flex:1;">Around $350 feeds 100 people. Desert Bloom is a registered 501(c)(3), so your gift is tax-deductible, and every dollar buys fresh ingredients.</p>
+            <a href="https://gofund.me/7fcaa4515" target="_blank" rel="noopener" style="margin-top:20px;align-self:flex-start;font-family:'Hanken Grotesk',sans-serif;font-weight:700;font-size:15px;color:#FFF6EC;background:#BE5733;padding:11px 20px;border-radius:2px;text-decoration:none;" style-hover="color:#000000;">Donate on GoFundMe</a>
+          </div>
+          <div data-reveal style="background:#FBF6EC;border-radius:3px;padding:clamp(24px,2.6vw,34px);display:flex;flex-direction:column;border-top:3px solid #5E6B3F;">
+            <span style="font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#9A3F22;">Partner</span>
+            <h3 style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 60,'SOFT' 64,'WONK' 1;font-weight:600;font-size:clamp(21px,2vw,27px);color:#2B2622;margin:14px 0 0;">Sponsor or supply</h3>
+            <p style="margin:12px 0 0;font-size:15.5px;line-height:1.6;color:#4A4138;flex:1;">For companies offering a corporate sponsorship, farms that want to donate food, or kitchens and pantries like CSA. Let's feed more, together.</p>
+            <button onClick="{{ openPartner }}" style="margin-top:20px;align-self:flex-start;font-family:'Hanken Grotesk',sans-serif;font-weight:700;font-size:15px;color:#FFF6EC;background:#5E6B3F;padding:11px 20px;border:none;border-radius:2px;cursor:pointer;" style-hover="color:#000000;">Partner with us</button>
+          </div>
+          <div data-reveal style="background:#FBF6EC;border-radius:3px;padding:clamp(24px,2.6vw,34px);display:flex;flex-direction:column;border-top:3px solid #D49A2D;">
+            <span style="font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#9A3F22;">Volunteer</span>
+            <h3 style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 60,'SOFT' 64,'WONK' 1;font-weight:600;font-size:clamp(21px,2vw,27px);color:#2B2622;margin:14px 0 0;">Show up and help</h3>
+            <p style="margin:12px 0 0;font-size:15.5px;line-height:1.6;color:#4A4138;flex:1;">For individuals who want to lend a hand at the next event, packing boxes and handing out meals. This is hands-on help, not a donation.</p>
+            <button onClick="{{ openVolunteer }}" style="margin-top:20px;align-self:flex-start;font-family:'Hanken Grotesk',sans-serif;font-weight:700;font-size:15px;color:#2B2622;background:#D49A2D;padding:11px 20px;border:none;border-radius:2px;cursor:pointer;" style-hover="color:#FFFFFF;">Volunteer with us</button>
+          </div>
+        </div>
+        <p data-reveal style="margin-top:28px;font-size:13.5px;line-height:1.6;color:#6B5D4D;max-width:64ch;">Desert Bloom Foundation is a registered 501(c)(3) nonprofit. Donations are tax-deductible to the extent allowed by law.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+    <div style="height:76px;"></div>
+    <div style="position:fixed;left:0;right:0;bottom:0;z-index:55;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(246,240,226,.94);backdrop-filter:saturate(1.1) blur(11px);-webkit-backdrop-filter:saturate(1.1) blur(11px);box-shadow:0 -1px 0 rgba(43,38,34,.1),0 -14px 34px -24px rgba(43,38,34,.7);">
+      <a href="https://gofund.me/7fcaa4515" target="_blank" rel="noopener" style="flex:1;text-align:center;font-family:'Hanken Grotesk',sans-serif;font-weight:700;font-size:16px;color:#FFF6EC;background:#BE5733;padding:14px;border-radius:3px;text-decoration:none;">Donate</a>
+      <button onClick="{{ openPartner }}" style="flex:1;text-align:center;font-family:'Hanken Grotesk',sans-serif;font-weight:700;font-size:16px;color:#2B2622;background:transparent;border:1.5px solid rgba(43,38,34,.32);padding:12.5px;border-radius:3px;cursor:pointer;">Partner</button>
+    </div>
+  </sc-if>
+
+  <footer style="background:#221E1B;color:#D8CBB6;padding-block:clamp(46px,8vh,84px);">
+    <div style="max-width:1240px;margin-inline:auto;padding-inline:clamp(20px,5.5vw,88px);">
+      <div style="display:flex;flex-wrap:wrap;gap:clamp(28px,5vw,64px);justify-content:space-between;">
+        <div style="flex:1 1 280px;min-width:min(100%,260px);">
+          <span style="display:flex;align-items:center;gap:13px;"><img src="assets/logo-mark.png" alt="" width="46" style="width:46px;height:auto;"><span style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 60,'SOFT' 55,'WONK' 1;font-weight:600;font-size:23px;color:#F3E9D6;">Desert Bloom Foundation</span></span>
+          <p style="margin:18px 0 0;max-width:36ch;font-size:14.5px;line-height:1.6;color:#B7A98E;">Fresh, hand-chosen meals for Westchester neighbors who go without.</p>
+        </div>
+        <div style="display:flex;gap:clamp(36px,6vw,80px);flex-wrap:wrap;">
+          <div>
+            <p style="font-family:'Spline Sans Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#8E8268;margin:0 0 14px;">Reach us</p>
+            <a href="mailto:desertsbloomfoundation@gmail.com" style="display:block;color:#E7DCC6;text-decoration:none;font-size:15px;margin-bottom:10px;transition:color .2s;" style-hover="color:#E0A24A;">desertsbloomfoundation@gmail.com</a>
+            <a href="https://instagram.com/desertbloomfoundation" target="_blank" rel="noopener" style="display:block;color:#E7DCC6;text-decoration:none;font-size:15px;transition:color .2s;" style-hover="color:#E0A24A;">@desertbloomfoundation</a>
+          </div>
+          <div>
+            <p style="font-family:'Spline Sans Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#8E8268;margin:0 0 14px;">Act</p>
+            <a href="https://gofund.me/7fcaa4515" target="_blank" rel="noopener" style="display:block;color:#E7DCC6;text-decoration:none;font-size:15px;margin-bottom:10px;transition:color .2s;" style-hover="color:#E0A24A;">Donate</a>
+            <a href="#get-involved" style="display:block;color:#E7DCC6;text-decoration:none;font-size:15px;margin-bottom:10px;transition:color .2s;" style-hover="color:#E0A24A;">Partner</a>
+            <a href="#get-involved" style="display:block;color:#E7DCC6;text-decoration:none;font-size:15px;transition:color .2s;" style-hover="color:#E0A24A;">Volunteer</a>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:clamp(34px,5vw,56px);padding-top:22px;border-top:1px solid rgba(216,203,182,.16);display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between;align-items:baseline;">
+        <p style="font-size:12.5px;line-height:1.6;color:#8E8268;margin:0;max-width:62ch;">Desert Bloom Foundation is a registered 501(c)(3) nonprofit. Donations are tax-deductible to the extent allowed by law.</p>
+        <p style="font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:.08em;color:#8E8268;margin:0;">© {{ year }} Desert Bloom Foundation</p>
+      </div>
+    </div>
+  </footer>
+
+  <sc-if value="{{ showPartner }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeForm }}" style="position:fixed;inset:0;z-index:70;background:rgba(28,24,21,.58);display:flex;align-items:flex-start;justify-content:center;padding:clamp(12px,4vh,56px) 16px;overflow:auto;">
+      <div onClick="{{ stop }}" style="background:#F8F2E6;width:100%;max-width:580px;border-radius:6px;padding:clamp(22px,3vw,38px);box-shadow:0 30px 80px -30px rgba(28,24,21,.7);">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
+          <div>
+            <p style="font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#9A3F22;margin:0;">Partner with us</p>
+            <h3 style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 80,'SOFT' 64,'WONK' 1;font-weight:600;font-size:clamp(23px,3vw,30px);color:#2B2622;margin:8px 0 0;">Sponsor or supply meals</h3>
+          </div>
+          <button onClick="{{ closeForm }}" aria-label="Close" style="flex:0 0 auto;width:40px;height:40px;background:transparent;border:1.5px solid rgba(43,38,34,.2);border-radius:4px;font-size:20px;color:#2B2622;cursor:pointer;">&times;</button>
+        </div>
+        <p style="font-size:14px;line-height:1.55;color:#5A4D3E;margin:14px 0 0;">For corporate sponsors, farms donating food, or kitchens and pantries like CSA. Send this and we'll reply from desertsbloomfoundation@gmail.com. You'll be copied so we can keep the thread going.</p>
+        <form id="partner-form" style="margin-top:22px;">
+          <div class="db-form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+            <label style="display:block;"><span style="font-family:'Spline Sans Mono',monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#6B5D4D;display:block;margin-bottom:6px;">Your name *</span><input name="name" required style="width:100%;padding:11px 13px;border:1.5px solid rgba(43,38,34,.22);border-radius:3px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;background:#FFFDF8;color:#2B2622;" style-focus="border-color:#BE5733;outline:none;"></label>
+            <label style="display:block;"><span style="font-family:'Spline Sans Mono',monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#6B5D4D;display:block;margin-bottom:6px;">Organization</span><input name="org" style="width:100%;padding:11px 13px;border:1.5px solid rgba(43,38,34,.22);border-radius:3px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;background:#FFFDF8;color:#2B2622;" style-focus="border-color:#BE5733;outline:none;"></label>
+            <label style="display:block;"><span style="font-family:'Spline Sans Mono',monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#6B5D4D;display:block;margin-bottom:6px;">Email *</span><input name="email" type="email" required style="width:100%;padding:11px 13px;border:1.5px solid rgba(43,38,34,.22);border-radius:3px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;background:#FFFDF8;color:#2B2622;" style-focus="border-color:#BE5733;outline:none;"></label>
+            <label style="display:block;"><span style="font-family:'Spline Sans Mono',monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#6B5D4D;display:block;margin-bottom:6px;">Phone</span><input name="phone" style="width:100%;padding:11px 13px;border:1.5px solid rgba(43,38,34,.22);border-radius:3px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;background:#FFFDF8;color:#2B2622;" style-focus="border-color:#BE5733;outline:none;"></label>
+          </div>
+          <label style="display:block;margin-top:14px;"><span style="font-family:'Spline Sans Mono',monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#6B5D4D;display:block;margin-bottom:6px;">What kind of partner are you? *</span><select name="type" required style="width:100%;padding:11px 13px;border:1.5px solid rgba(43,38,34,.22);border-radius:3px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;background:#FFFDF8;color:#2B2622;" style-focus="border-color:#BE5733;outline:none;"><option value="">Select one</option><option>Corporate sponsor (funding)</option><option>Farm or food supplier</option><option>Kitchen or pantry (like CSA)</option><option>Other</option></select></label>
+          <label style="display:block;margin-top:14px;"><span style="font-family:'Spline Sans Mono',monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#6B5D4D;display:block;margin-bottom:6px;">What can you provide?</span><span style="display:flex;flex-wrap:wrap;gap:8px 18px;padding-top:2px;"><label style="font-size:14px;color:#3A332C;display:flex;align-items:center;gap:7px;"><input type="checkbox" name="provide" value="Funding">Funding</label><label style="font-size:14px;color:#3A332C;display:flex;align-items:center;gap:7px;"><input type="checkbox" name="provide" value="Food">Food</label><label style="font-size:14px;color:#3A332C;display:flex;align-items:center;gap:7px;"><input type="checkbox" name="provide" value="Kitchen or space">Kitchen / space</label><label style="font-size:14px;color:#3A332C;display:flex;align-items:center;gap:7px;"><input type="checkbox" name="provide" value="Volunteers">Volunteers</label></span></label>
+          <div class="db-form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;">
+            <label style="display:block;"><span style="font-family:'Spline Sans Mono',monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#6B5D4D;display:block;margin-bottom:6px;">Sponsorship amount</span><input name="amount" placeholder="e.g. $350, $1,000" style="width:100%;padding:11px 13px;border:1.5px solid rgba(43,38,34,.22);border-radius:3px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;background:#FFFDF8;color:#2B2622;" style-focus="border-color:#BE5733;outline:none;"></label>
+            <label style="display:block;"><span style="font-family:'Spline Sans Mono',monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#6B5D4D;display:block;margin-bottom:6px;">Town / area</span><input name="area" placeholder="Westchester town" style="width:100%;padding:11px 13px;border:1.5px solid rgba(43,38,34,.22);border-radius:3px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;background:#FFFDF8;color:#2B2622;" style-focus="border-color:#BE5733;outline:none;"></label>
+          </div>
+          <label style="display:block;margin-top:14px;"><span style="font-family:'Spline Sans Mono',monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#6B5D4D;display:block;margin-bottom:6px;">Anything else?</span><textarea name="message" rows="3" style="width:100%;padding:11px 13px;border:1.5px solid rgba(43,38,34,.22);border-radius:3px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;background:#FFFDF8;color:#2B2622;resize:vertical;" style-focus="border-color:#BE5733;outline:none;"></textarea></label>
+          <button type="button" onClick="{{ submitPartner }}" style="margin-top:20px;width:100%;font-family:'Hanken Grotesk',sans-serif;font-weight:700;font-size:16px;color:#FFF6EC;background:#BE5733;padding:14px;border:none;border-radius:3px;cursor:pointer;" style-hover="background:#A2452A;">Send to Desert Bloom</button>
+          <p style="font-size:11.5px;color:#8A7B66;margin:12px 0 0;line-height:1.5;">This opens your email app with everything filled in, addressed to us and copied to you. Just hit send.</p>
+        </form>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ showVolunteer }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeForm }}" style="position:fixed;inset:0;z-index:70;background:rgba(28,24,21,.58);display:flex;align-items:flex-start;justify-content:center;padding:clamp(12px,4vh,56px) 16px;overflow:auto;">
+      <div onClick="{{ stop }}" style="background:#F8F2E6;width:100%;max-width:560px;border-radius:6px;padding:clamp(22px,3vw,38px);box-shadow:0 30px 80px -30px rgba(28,24,21,.7);">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
+          <div>
+            <p style="font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#9A3F22;margin:0;">Volunteer</p>
+            <h3 style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 80,'SOFT' 64,'WONK' 1;font-weight:600;font-size:clamp(23px,3vw,30px);color:#2B2622;margin:8px 0 0;">Help at the next event</h3>
+          </div>
+          <button onClick="{{ closeForm }}" aria-label="Close" style="flex:0 0 auto;width:40px;height:40px;background:transparent;border:1.5px solid rgba(43,38,34,.2);border-radius:4px;font-size:20px;color:#2B2622;cursor:pointer;">&times;</button>
+        </div>
+        <p style="font-size:14px;line-height:1.55;color:#5A4D3E;margin:14px 0 0;">This is for individuals who want to show up and help on the ground: packing boxes, handing out meals, setup and cleanup. It is not a donation. To give or sponsor, use Donate or Partner with us. You'll be copied on the email so we can reply.</p>
+        <form id="volunteer-form" style="margin-top:22px;">
+          <div class="db-form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+            <label style="display:block;"><span style="font-family:'Spline Sans Mono',monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#6B5D4D;display:block;margin-bottom:6px;">Your name *</span><input name="name" required style="width:100%;padding:11px 13px;border:1.5px solid rgba(43,38,34,.22);border-radius:3px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;background:#FFFDF8;color:#2B2622;" style-focus="border-color:#BE5733;outline:none;"></label>
+            <label style="display:block;"><span style="font-family:'Spline Sans Mono',monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#6B5D4D;display:block;margin-bottom:6px;">Email *</span><input name="email" type="email" required style="width:100%;padding:11px 13px;border:1.5px solid rgba(43,38,34,.22);border-radius:3px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;background:#FFFDF8;color:#2B2622;" style-focus="border-color:#BE5733;outline:none;"></label>
+            <label style="display:block;"><span style="font-family:'Spline Sans Mono',monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#6B5D4D;display:block;margin-bottom:6px;">Phone</span><input name="phone" style="width:100%;padding:11px 13px;border:1.5px solid rgba(43,38,34,.22);border-radius:3px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;background:#FFFDF8;color:#2B2622;" style-focus="border-color:#BE5733;outline:none;"></label>
+            <label style="display:block;"><span style="font-family:'Spline Sans Mono',monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#6B5D4D;display:block;margin-bottom:6px;">18 or older? (info only, all ages welcome)</span><select name="adult" style="width:100%;padding:11px 13px;border:1.5px solid rgba(43,38,34,.22);border-radius:3px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;background:#FFFDF8;color:#2B2622;" style-focus="border-color:#BE5733;outline:none;"><option value="">Select</option><option>Yes</option><option>No, I'm under 18</option></select></label>
+          </div>
+          <label style="display:block;margin-top:14px;"><span style="font-family:'Spline Sans Mono',monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#6B5D4D;display:block;margin-bottom:6px;">What would you like to help with?</span><span style="display:flex;flex-wrap:wrap;gap:8px 18px;padding-top:2px;"><label style="font-size:14px;color:#3A332C;display:flex;align-items:center;gap:7px;"><input type="checkbox" name="tasks" value="Packing meals">Packing meals</label><label style="font-size:14px;color:#3A332C;display:flex;align-items:center;gap:7px;"><input type="checkbox" name="tasks" value="Handing out meals">Handing out meals</label><label style="font-size:14px;color:#3A332C;display:flex;align-items:center;gap:7px;"><input type="checkbox" name="tasks" value="Delivery">Delivery</label><label style="font-size:14px;color:#3A332C;display:flex;align-items:center;gap:7px;"><input type="checkbox" name="tasks" value="Setup and cleanup">Setup &amp; cleanup</label></span></label>
+          <div class="db-form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;">
+            <label style="display:block;"><span style="font-family:'Spline Sans Mono',monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#6B5D4D;display:block;margin-bottom:6px;">When are you free?</span><input name="availability" placeholder="Weekends, specific dates" style="width:100%;padding:11px 13px;border:1.5px solid rgba(43,38,34,.22);border-radius:3px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;background:#FFFDF8;color:#2B2622;" style-focus="border-color:#BE5733;outline:none;"></label>
+            <label style="display:block;"><span style="font-family:'Spline Sans Mono',monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#6B5D4D;display:block;margin-bottom:6px;">Group or school?</span><input name="group" placeholder="Optional" style="width:100%;padding:11px 13px;border:1.5px solid rgba(43,38,34,.22);border-radius:3px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;background:#FFFDF8;color:#2B2622;" style-focus="border-color:#BE5733;outline:none;"></label>
+          </div>
+          <label style="display:block;margin-top:14px;"><span style="font-family:'Spline Sans Mono',monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#6B5D4D;display:block;margin-bottom:6px;">Anything else?</span><textarea name="message" rows="3" style="width:100%;padding:11px 13px;border:1.5px solid rgba(43,38,34,.22);border-radius:3px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;background:#FFFDF8;color:#2B2622;resize:vertical;" style-focus="border-color:#BE5733;outline:none;"></textarea></label>
+          <button type="button" onClick="{{ submitVolunteer }}" style="margin-top:20px;width:100%;font-family:'Hanken Grotesk',sans-serif;font-weight:700;font-size:16px;color:#FFF6EC;background:#BE5733;padding:14px;border:none;border-radius:3px;cursor:pointer;" style-hover="background:#A2452A;">Send to Desert Bloom</button>
+          <p style="font-size:11.5px;color:#8A7B66;margin:12px 0 0;line-height:1.5;">This opens your email app with everything filled in, addressed to us and copied to you. Just hit send.</p>
+        </form>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ toast }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:80;background:#2B2622;color:#F6EEDC;padding:14px 22px;border-radius:6px;box-shadow:0 18px 40px -18px rgba(28,24,21,.8);font-size:14.5px;max-width:90vw;text-align:center;animation:dbToast .35s ease both;">{{ toast }}</div>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    const w = (typeof window !== 'undefined') ? window.innerWidth : 1280;
+    this.state = { menuOpen: false, isMobile: w < 920, heroHexes: [], heroW: 1000, heroH: 600, openForm: null, toast: '' };
+    this.GLOW = [197, 198, 170];
+    this.FORM_ENDPOINT = { partner: 'https://formspree.io/f/xvzjadqg', volunteer: 'https://formspree.io/f/xqevqwdg' };
+    this.LABELS = {
+      partner: { name: 'Name', org: 'Organization', type: 'Partner type', provide: 'Can provide', amount: 'Sponsorship amount', area: 'Town / area', message: 'Message' },
+      volunteer: { name: 'Name', phone: 'Phone', adult: '18 or older', tasks: 'Wants to help with', availability: 'Availability', group: 'Group or school', message: 'Message' }
+    };
+  }
+
+  // Honeycomb lives ONLY in the hero (the landing area). It is dry cracked earth
+  // at rest and lights up sage near the cursor. Positional + mouse-driven, never
+  // sticky; degrades to a clean static field with no JS mouse handling.
+  buildHeroHexes(W, H) {
+    const R = Math.max(46, Math.min(70, W / 13));
+    const h2 = R * Math.sqrt(3) / 2;
+    const colStep = R * 1.5, rowStep = h2 * 2;
+    const hexes = [], data = [];
+    let idx = 0, col = 0;
+    for (let cx = -R; cx <= W + R; cx += colStep, col++) {
+      const yOff = (col % 2) ? rowStep / 2 : 0;
+      for (let cy = -R + yOff; cy <= H + R; cy += rowStep) {
+        const rnd = (n) => { const s = Math.sin((idx + 1) * 12.9898 + n * 78.233) * 43758.5453; return s - Math.floor(s); };
+        const jx = (rnd(1) - 0.5) * R * 0.16, jy = (rnd(2) - 0.5) * R * 0.16;
+        const v = [[cx - R, cy], [cx - R / 2, cy - h2], [cx + R / 2, cy - h2], [cx + R, cy], [cx + R / 2, cy + h2], [cx - R / 2, cy + h2]];
+        const pts = v.map(([x, y], k) => (x + jx + (rnd(k + 3) - 0.5) * R * 0.09).toFixed(1) + ',' + (y + jy + (rnd(k + 9) - 0.5) * R * 0.09).toFixed(1)).join(' ');
+        const baseArr = [227, 204, 161];
+        const op = 0.1 + rnd(7) * 0.05;
+        hexes.push({ pts, style: { fill: 'rgb(227,204,161)', fillOpacity: op.toFixed(2), stroke: '#C2774E', strokeOpacity: (0.18 + rnd(8) * 0.1).toFixed(2), strokeWidth: 1.2, strokeLinejoin: 'round' } });
+        data.push({ cx: cx + jx, cy: cy + jy, baseArr: baseArr, op: op });
+        idx++;
+      }
+    }
+    this.heroData = data;
+    return hexes;
+  }
+
+  measureHero() {
+    const hero = document.getElementById('hero');
+    if (!hero) return;
+    const W = Math.max(320, hero.clientWidth);
+    const H = Math.max(300, hero.clientHeight);
+    if (this._hw === W && Math.abs((this._hh || 0) - H) < 40) return;
+    this._hw = W; this._hh = H;
+    this.setState({ heroW: W, heroH: H, heroHexes: this.buildHeroHexes(W, H) });
+    setTimeout(() => {
+      this.heroEls = Array.from(document.querySelectorAll('#hero-hex polygon'));
+      const im = document.querySelector('#hero img[alt^="Illustration"]');
+      this.emblem = im ? im.parentElement : null;
+      if (this.emblem) this.emblem.style.transition = 'transform .5s cubic-bezier(.2,.7,.2,1)';
+    }, 60);
+  }
+
+  mix(a, b, t) { return 'rgb(' + Math.round(a[0] + (b[0] - a[0]) * t) + ',' + Math.round(a[1] + (b[1] - a[1]) * t) + ',' + Math.round(a[2] + (b[2] - a[2]) * t) + ')'; }
+
+  paintHero() {
+    this._raf = null;
+    if (this.reduce || !this.heroEls || !this.heroData) return;
+    const hero = document.getElementById('hero');
+    if (!hero) return;
+    const r = hero.getBoundingClientRect();
+    const RAD = 215;
+    for (let i = 0; i < this.heroEls.length; i++) {
+      const el = this.heroEls[i], d = this.heroData[i];
+      if (!el || !d) continue;
+      let fill = 'rgb(227,204,161)', op = d.op;
+      if (this._mx != null) {
+        const dist = Math.hypot((this._mx - r.left) - d.cx, (this._my - r.top) - d.cy);
+        if (dist < RAD) { const t = 1 - dist / RAD; fill = this.mix(d.baseArr, this.GLOW, t * 0.5); op = d.op + t * 0.2; }
+      }
+      el.style.fill = fill;
+      el.style.fillOpacity = op;
+    }
+    if (this.emblem) {
+      if (this._mx == null) { this.emblem.style.transform = ''; }
+      else {
+        const dx = (this._mx - r.left) / r.width - 0.5;
+        const dy = (this._my - r.top) / r.height - 0.5;
+        this.emblem.style.transform = 'perspective(800px) rotateY(' + (dx * 6).toFixed(2) + 'deg) rotateX(' + (-dy * 6).toFixed(2) + 'deg) translate(' + (dx * 12).toFixed(1) + 'px,' + (dy * 9).toFixed(1) + 'px)';
+      }
+    }
+  }
+
+  scheduleHero() { if (this._raf) return; this._raf = requestAnimationFrame(() => this.paintHero()); }
+
+  componentDidMount() {
+    this.reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    this.onResize = () => {
+      const m = window.innerWidth < 920;
+      if (m !== this.state.isMobile) this.setState({ isMobile: m });
+      clearTimeout(this._rz);
+      this._rz = setTimeout(() => this.measureHero(), 160);
+    };
+    window.addEventListener('resize', this.onResize, { passive: true });
+    this.measureHero();
+    this._t1 = setTimeout(() => this.measureHero(), 500);
+    this.onLoad = () => this.measureHero();
+    window.addEventListener('load', this.onLoad);
+    this.setupReveals();
+    this.setupCountUp();
+    this.setupMagnetic();
+  }
+
+  setupReveals() {
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    if (this.reduce || !('IntersectionObserver' in window)) return;
+    els.forEach((el, i) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(22px)';
+      el.style.transition = 'opacity .85s cubic-bezier(.2,.7,.2,1), transform .85s cubic-bezier(.2,.7,.2,1)';
+      el.style.transitionDelay = ((i % 3) * 0.07).toFixed(2) + 's';
+      el.style.willChange = 'opacity, transform';
+    });
+    const reveal = (el) => { el.style.opacity = '1'; el.style.transform = 'none'; };
+    const io = new IntersectionObserver((ents) => {
+      ents.forEach((e) => { if (e.isIntersecting) { reveal(e.target); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.05 });
+    els.forEach((el) => io.observe(el));
+    this.failsafe = setTimeout(() => els.forEach(reveal), 1600);
+  }
+
+  setupCountUp() {
+    const nodes = Array.from(document.querySelectorAll('[data-count]'));
+    const items = [];
+    nodes.forEach((el) => {
+      const original = el.textContent.trim();
+      const m = original.match(/^(\D*)([\d.,]+)(.*)$/);
+      if (!m) return;
+      const dec = (m[2].split('.')[1] || '').length;
+      const target = parseFloat(m[2].replace(/,/g, ''));
+      if (!isFinite(target)) return;
+      items.push({ el: el, pre: m[1], suf: m[3], dec: dec, target: target, original: original, started: false, done: false, raf: 0, wd: 0 });
+    });
+    if (!items.length) return;
+    // Resting state is ALWAYS the final value, so the correct number shows on first paint
+    // and stays correct even if no animation ever runs (reduced-motion, JS hiccup, re-render).
+    const fmt = (v, it) => it.pre + v.toFixed(it.dec).replace(/\B(?=(\d{3})+(?!\d))/g, ',') + it.suf;
+    const finish = (it) => { it.done = true; if (it.raf) cancelAnimationFrame(it.raf); if (it.wd) clearTimeout(it.wd); it.raf = 0; it.el.textContent = it.original; };
+    if (this.reduce || !('IntersectionObserver' in window) || !('requestAnimationFrame' in window)) return;
+    const dur = 1150;
+    const run = (it) => {
+      if (it.started || it.done) return;                 // idempotent: never restart or reset
+      it.started = true;
+      const t0 = performance.now();
+      it.wd = setTimeout(() => finish(it), dur + 800);   // watchdog: always lands on the exact target
+      const step = (now) => {
+        if (it.done) return;
+        const p = Math.min(1, (now - t0) / dur);
+        const e = 1 - Math.pow(1 - p, 3);
+        it.el.textContent = fmt(it.target * e, it);
+        if (p < 1) { it.raf = requestAnimationFrame(step); } else { finish(it); }
+      };
+      it.el.textContent = fmt(0, it);
+      it.raf = requestAnimationFrame(step);
+    };
+    const io = new IntersectionObserver((ents) => {
+      ents.forEach((e) => { if (e.isIntersecting) { const it = items.find((x) => x.el === e.target); if (it) { run(it); io.unobserve(e.target); } } });
+    }, { threshold: 0.2, rootMargin: '0px 0px -8% 0px' });
+    items.forEach((it) => io.observe(it.el));
+  }
+
+  setupMagnetic() {
+    if (this.reduce) return;
+    Array.from(document.querySelectorAll('[data-magnetic]')).forEach((el) => {
+      el.style.transition = 'transform .25s cubic-bezier(.2,.7,.2,1)';
+      el.addEventListener('mousemove', (e) => {
+        const r = el.getBoundingClientRect();
+        el.style.transform = 'translate(' + ((e.clientX - (r.left + r.width / 2)) * 0.3).toFixed(1) + 'px,' + ((e.clientY - (r.top + r.height / 2)) * 0.4).toFixed(1) + 'px)';
+      });
+      el.addEventListener('mouseleave', () => { el.style.transform = ''; });
+    });
+  }
+
+  submitForm(kind) {
+    const form = document.getElementById(kind + '-form');
+    if (!form) return;
+    if (form.reportValidity && !form.reportValidity()) return;
+    const fd = new FormData(form);
+    const email = (fd.get('email') || '').toString().trim();
+    const L = this.LABELS[kind];
+    const lines = [];
+    for (const key of Object.keys(L)) {
+      const vals = fd.getAll(key).filter((v) => String(v).trim() !== '');
+      if (vals.length) lines.push(L[key] + ': ' + vals.join(', '));
+    }
+    const who = (fd.get('name') || 'a supporter').toString();
+    const subject = (kind === 'partner' ? 'Partnership inquiry' : 'Volunteer signup') + ' from ' + who;
+    const endpoint = this.FORM_ENDPOINT && this.FORM_ENDPOINT[kind];
+    if (endpoint) {
+      const data = { _subject: subject, _replyto: email, _cc: email, email: email };
+      for (const key of Object.keys(L)) {
+        const vals = fd.getAll(key).filter((v) => String(v).trim() !== '');
+        if (vals.length) data[L[key]] = vals.join(', ');
+      }
+      this.setState({ openForm: null, toast: 'Sending your details…' });
+      fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data) })
+        .then((r) => { this.setState({ toast: r.ok ? ('Thanks ' + who + '. Your details were sent to Desert Bloom and copied to your email.') : 'Could not send automatically. Please email desertsbloomfoundation@gmail.com.' }); })
+        .catch(() => { this.setState({ toast: 'Network issue. Please email desertsbloomfoundation@gmail.com.' }); })
+        .then(() => { clearTimeout(this._toast); this._toast = setTimeout(() => this.setState({ toast: '' }), 8000); });
+      return;
+    }
+    const body = 'New ' + kind + ' inquiry from the Desert Bloom website:\n\n' + lines.join('\n');
+    const params = [];
+    if (email) params.push('cc=' + encodeURIComponent(email));
+    params.push('subject=' + encodeURIComponent(subject));
+    params.push('body=' + encodeURIComponent(body));
+    window.location.href = 'mailto:desertsbloomfoundation@gmail.com?' + params.join('&');
+    this.setState({ openForm: null, toast: 'Thanks ' + who + '. Your email draft just opened, add anything else and hit send.' });
+    clearTimeout(this._toast);
+    this._toast = setTimeout(() => this.setState({ toast: '' }), 7000);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize);
+    window.removeEventListener('load', this.onLoad);
+    clearTimeout(this.failsafe); clearTimeout(this._rz); clearTimeout(this._t1); clearTimeout(this._toast);
+  }
+
+  renderVals() {
+    return {
+      heroHexes: this.state.heroHexes,
+      heroW: this.state.heroW,
+      heroH: this.state.heroH,
+      year: new Date().getFullYear(),
+      isMobile: this.state.isMobile,
+      isDesktop: !this.state.isMobile,
+      menuOpen: this.state.menuOpen,
+      showPartner: this.state.openForm === 'partner',
+      showVolunteer: this.state.openForm === 'volunteer',
+      toast: this.state.toast,
+      noop: () => {},
+      stop: (e) => { if (e && e.stopPropagation) e.stopPropagation(); },
+      toggleMenu: () => this.setState((s) => ({ menuOpen: !s.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      openPartner: () => this.setState({ openForm: 'partner', menuOpen: false }),
+      openVolunteer: () => this.setState({ openForm: 'volunteer', menuOpen: false }),
+      closeForm: () => this.setState({ openForm: null }),
+      submitPartner: () => this.submitForm('partner'),
+      submitVolunteer: () => this.submitForm('volunteer'),
+      onHeroMove: (e) => { this._mx = e.clientX; this._my = e.clientY; this.scheduleHero(); },
+      onHeroTouch: (e) => { const t = e.touches && e.touches[0]; if (t) { this._mx = t.clientX; this._my = t.clientY; this.scheduleHero(); } },
+      onHeroLeave: () => { this._mx = null; this.scheduleHero(); }
+    };
+  }
+}
+</script>
 </body>
 </html>
