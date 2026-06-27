@@ -1,0 +1,9 @@
+# Internal QA / build artifacts — not part of the website
+audit/
+screenshots/
+.thumbnail
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log
